@@ -1,4 +1,3 @@
-cat << 'EOF' > app.py
 import streamlit as st
 import pandas as pd
 
@@ -110,7 +109,7 @@ if st.session_state.calculado:
         st.error(f"⚠️ **Alerta de Inviabilidade:** Operação operando no vermelho com este orçamento. É preciso otimizar as taxas.")
 
     st.markdown("---")
-    
+
     # Seção 3: Geração do Gráfico de Escala
     st.write("#### 📈 Rampa de Escala (Cenários de Lucro Líquido)")
     
@@ -155,8 +154,3 @@ if st.session_state.calculado:
             📥 Gerar PDF do Relatório Comercial
         </button>
     """, height=60)
-
-    """, height=60)
-
-EOF
-
