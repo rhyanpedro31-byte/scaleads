@@ -118,8 +118,8 @@ if st.session_state.calculado:
     dados_grafico = []
     
     for inv_simulado in valores_simulados:
-        
-        if inv_simulado == 0: continue
+        if inv_simulado == 0:
+            continue
         imp_s = (inv_simulado / cpm) * 1000
         cli_s = imp_s * (ctr / 100)
         ven_s = cli_s * (taxa_conversao / 100)
@@ -154,6 +154,8 @@ if st.session_state.calculado:
         ">
             📥 Gerar PDF do Relatório Comercial
         </button>
+    """, height=60)
+
     """, height=60)
 
 EOF
