@@ -110,15 +110,15 @@ if st.session_state.calculado:
         st.error(f"⚠️ **Alerta de Inviabilidade:** Operação operando no vermelho com este orçamento. É preciso otimizar as taxas.")
 
     st.markdown("---")
-
+    
     # Seção 3: Geração do Gráfico de Escala
     st.write("#### 📈 Rampa de Escala (Cenários de Lucro Líquido)")
     
-valores_simulados = [investimento * f for f in [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]]
-dados_grafico = []
-
-for inv_simulado in valores_simulados:
-
+    valores_simulados = [investimento * f for f in [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]]
+    dados_grafico = []
+    
+    for inv_simulado in valores_simulados:
+        
         if inv_simulado == 0: continue
         imp_s = (inv_simulado / cpm) * 1000
         cli_s = imp_s * (ctr / 100)
